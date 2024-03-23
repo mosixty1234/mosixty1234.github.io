@@ -126,6 +126,12 @@ body {
   justify-content: space-around;
   padding: 25px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.card:hover{
+  transform: translateY(-5px);
 }
 
 .card:first-child {
