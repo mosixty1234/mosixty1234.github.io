@@ -102,6 +102,155 @@ form p a{
     color:#7e7d7d;
 }
 
+/* Section Styles */
+.category-page section {
+   margin-bottom: 20px;
+   padding: 15px;
+   background-color: #f1f8fb;
+   border-left: 4px solid #2980b9;
+   border-radius: 4px;
+}
+
+.category-page p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 1em; /* Add spacing between paragraphs */
+}
+
+.core-topics ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.core-topics ul li {
+    padding: 10px 0;
+    font-size: 1.1em;
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+}
+
+.core-topics ul li:last-child {
+    border-bottom: none;
+}
+
+/* Video Library */
+.video-links a {
+    display: block;
+    color: #2980b9;
+    text-decoration: none;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.video-links a:hover {
+    background-color: #eaf5fc;
+}
+
+/* Quizzes and Exercises */
+.quizzes a {
+    display: inline-block;
+    color: #fff;
+    background-color: #2980b9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.quizzes a:hover {
+    background-color: #1f6087;
+}
+
+/* Logo Animation */
+/* Colors for each letter */
+.letter-color-1 { color: #FF5733; } /* Red */
+.letter-color-2 { color: #FFC300; } /* Yellow */
+.letter-color-3 { color: #28B463; } /* Green */
+.letter-color-4 { color: #3498DB; } /* Blue */
+.letter-color-5 { color: #8E44AD; } /* Purple */
+.letter-color-6 { color: #FF6F61; } /* Coral */
+.letter-color-7 { color: #2ECC71; } /* Light Green */
+.letter-color-8 { color: #2980B9; } /* Dark Blue */
+
+
+/* Logo Animation with Slide from Left and Bounce Effect */
+.animated-logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  opacity: 5; /* Start transparent */
+  animation: slideInLeftBounce 3.5s ease forwards; /* Apply animation */
+}
+
+/* Ensure all spans are aligned without extra spacing */
+.logo span {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Keyframes for slide-in from left with bounce back */
+@keyframes slideInLeftBounce {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /* Start off-screen to the left */
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(10px); /* Slight overshoot to the right */
+  }
+  100% {
+    transform: translateX(0); /* Settle back to original position */
+  }
+}
+
+/* Heading Animation with Spacing */
+.animated-heading {
+  font-size: 15px;
+  color: #666;
+  font-family: italic;
+  opacity: 0; /* Start transparent */
+  margin-top: 8px; /* Add space above the heading */
+  animation: fadeInSlideUp 2s ease forwards; /* Apply animation */
+  animation-delay: 0.5s; /* Delay to create a staggered effect */
+}
+
+/* Keyframes for logo and heading animations */
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Slide down from above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Slide up from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root{
@@ -1403,6 +1552,31 @@ section{
 .footer span{
    color:var(--main-color);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-page {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .video-links a {
+        font-size: 0.9em;
+    }
+
+    .quizzes a {
+        padding: 8px 15px;
+    }
+}
+
+
 
 
 
