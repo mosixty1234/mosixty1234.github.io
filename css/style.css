@@ -499,6 +499,22 @@ section{
    color:var(--main-color);
 }
 
+.glossary-term {
+      padding-bottom: 15px;
+      margin-bottom: 16px;
+}
+.term-definition {
+   margin: 0;
+   color: #64767e;
+   font-style: italic;
+   font-size: 13.4px;
+}
+.term-title {
+   font-size: 1.5em;
+   color: #333;
+   margin: 0; /* Reduce spacing around each term title */
+}
+
 .about .row{
    display: flex;
    align-items: center;
