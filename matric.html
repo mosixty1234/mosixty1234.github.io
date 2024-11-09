@@ -1,58 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Matric analysis</title>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>categories</title>
 
-    <!-- Montserrat Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <script src="https://kit.fontawesome.com/c92c70a5e9.js" crossorigin="anonymous"></script>
 
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <div class="grid-container">
+</head>
 
-      <!-- Header -->
-      <header class="header">
-        <div class="menu-icon" onclick="openSidebar()">
-          <span class="material-icons-outlined">menu</span>
-        </div>
-        <div class="header-left">
-          <span class="material-icons-outlined">search</span>
-        </div>
-        <div class="header-right">
-        </div>
-      </header>
-      <!-- End Header -->
+<body>
+<header class="header">
+   
+   <section class="flex">
 
-      <!-- Sidebar -->
-      <aside id="sidebar">
-        <div class="sidebar-title">
-          <div class="sidebar-brand">
-            <span class="material-icons-outlined"></span> Matric Overall Analysis
-          </div>
-          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
-        </div>
-
-        <ul class="sidebar-list">
+      <a href="home.html" class="logo animated-logo">
+         <span class="letter-color-1">S</span>
+         <span class="letter-color-2">T</span>
+         <span class="letter-color-3">E</span>
+         <span class="letter-color-4">M</span>
+         &nbsp;&
+         <span class="letter-color-5">T</span>
+         <span class="letter-color-6">e</span>
+         <span class="letter-color-7">c</span>
+         <span class="letter-color-8">h</span>
+         &nbsp;ACADEMY
+       </a>
        
-          <li class="sidebar-list-item">
-            <a href="https://mosixty1234.github.io/home" target="_blank"> 
-              <span class="material-icons-outlined">dashboard</span> e-Learning 
-            </a>
-       
-      </aside>
-      <!-- End Sidebar -->
+      <h2 class="animated-heading">Where Youth Discover STEM & Tech:Empowering those who take charge with their future</h2>
+
+      <form action="search.html" method="post" class="search-form">
+         <input 
+            type="text" 
+            name="search_box" 
+            id="search-box" 
+            required 
+            placeholder="Search courses..." 
+            maxlength="100" 
+            aria-label="Search for courses">
+         <button type="submit" class="search-button">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="sr-only">Search</span>
+         </button>
+      </form>
+      
+      <div class="icons">
+         <button id="menu-btn" class="icon-button fas fa-bars" aria-label="Menu"></button>
+         <button id="user-btn" class="icon-button fas fa-user" aria-label="User Profile"></button>
+         <button id="toggle-btn" class="icon-button fas fa-sun" aria-label="Toggle Theme"></button>
+      </div>
+
+      
+
+     <div class="profile">
+        <img src="images/pic-1.png" class="image" alt="">
+        <h3 class="name">Sipho Cedric Dlamini</h3>
+        <p class="role">Student</p>
+        <a href="profile.html" class="btn">view profile</a>
+
+      s<div class="flex-btn">
+           <a href="login.html" class="option-btn">login</a>
+           <a href="register.html" class="option-btn">register</a>
+        </div>
+     </div>
+
+  </section>
+
+</header>
+
+  <div class="side-bar">
+
+    <div id="close-btn">
+       <i class="fas fa-times"></i>
+    </div>
+ 
+    <div class="profile">
+   <img src="images/pic-1.png" class="profile-image" alt="Profile picture of Sipho Cedric Dlamini">
+   <h3 class="profile-name">Sipho Cedric Dlamini</h3>
+   <p class="profile-role">Student</p>
+   <a href="profile.html" class="profile-btn">View Profile</a>
+</div>
+
+ 
+<nav class="navbar">
+   <a href="home.html" class="nav-link"><i class="fas fa-house-user"></i><span>HOME</span></a>
+   <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i><span>ABOUT</span></a>
+   <a href="courses.html" class="nav-link"><i class="fas fa-book-open"></i><span>COURSES</span></a>
+   <a href="contact.html" class="nav-link"><i class="fas fa-envelope-open-text"></i><span>CONTACT-US</span></a>
+   <a href="matric.html" class="nav-link"><i class="fas fa-chart-bar"></i><span>Matric Analysis</span></a>
+</nav>
+ </div>
 
       <!-- Main -->
       <main class="main-container">
         <div class="main-title">
-          <h2>DASHBOARD</h2>
+          <h2 class="logo animated-logo">DASHBOARD</h2>
         </div>
 
         <div class="main-cards">

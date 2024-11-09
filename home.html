@@ -12,6 +12,7 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -35,15 +36,25 @@
       <h2 class="animated-heading">Where Youth Discover STEM & Tech:Empowering those who take charge with their future</h2>
 
       <form action="search.html" method="post" class="search-form">
-         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
-         <button type="submit" class="fas fa-search"></button>
+         <input 
+            type="text" 
+            name="search_box" 
+            id="search-box" 
+            required 
+            placeholder="Search courses..." 
+            maxlength="100" 
+            aria-label="Search for courses">
+         <button type="submit" class="search-button">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="sr-only">Search</span>
+         </button>
       </form>
 
+       
       <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="search-btn" class="fas fa-search"></div>
-         <div id="user-btn" class="fas fa-user"></div>
-         <div id="toggle-btn" class="fas fa-sun"></div>
+         <button id="menu-btn" class="icon-button fas fa-bars" aria-label="Menu"></button>
+         <button id="user-btn" class="icon-button fas fa-user" aria-label="User Profile"></button>
+         <button id="toggle-btn" class="icon-button fas fa-sun" aria-label="Toggle Theme"></button>
       </div>
 
       <div class="profile">
@@ -51,6 +62,7 @@
          <h3 class="name">Sipho Cedric Dlamini</h3>
          <p class="role">Student</p>
          <a href="profile.html" class="btn">view profile</a>
+
          <div class="flex-btn">
             <a href="login.html" class="option-btn">login</a>
             <a href="register.html" class="option-btn">register</a>
@@ -68,21 +80,21 @@
    </div>
 
    <div class="profile">
-      <img src="images/pic-1.png" class="image" alt="">
-      <h3 class="name">Sipho Cedric Dlamini</h3>
-      <p class="role">Student</p>
-      <a href="profile.html" class="btn">view profile</a>
+      <img src="images/pic-1.png" class="profile-image" alt="Profile picture of Sipho Cedric Dlamini">
+      <h3 class="profile-name">Sipho Cedric Dlamini</h3>
+      <p class="profile-role">Student</p>
+      <a href="profile.html" class="profile-btn">View Profile</a>
    </div>
 
    <nav class="navbar">
-      <a href="home.html"><i class="fas fa-home"></i><span>HOME</span></a>
-      <a href="about.html"><i class="fas fa-question"></i><span>ABOUT</span></a>
-      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>COURSES</span></a>
-      <a href="contact.html"><i class="fas fa-headset"></i><span>CONTACT-US</span></a>
-      <a href="matric.html"><i class="fas fa-headset"></i><span>Matric Analysis</span></a>
+      <a href="home.html" class="nav-link"><i class="fas fa-house-user"></i><span>HOME</span></a>
+      <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i><span>ABOUT</span></a>
+      <a href="courses.html" class="nav-link"><i class="fas fa-book-open"></i><span>COURSES</span></a>
+      <a href="contact.html" class="nav-link"><i class="fas fa-envelope-open-text"></i><span>CONTACT-US</span></a>
+      <a href="matric.html" class="nav-link"><i class="fas fa-chart-bar"></i><span>Matric Analysis</span></a>
+   </nav>
+    </div>
 
-</nav>
-</div>
 
 <section class="home-grid">
 
@@ -121,7 +133,7 @@
       <div class="box">
          <h3 class="title">top categories</h3>
          <div class="flex">
-            <a href="#"><i class="fas fa-flask"></i><span> Science Fundamentals</span></a>
+            <a href="categories.html"><i class="fas fa-flask"></i><span> Science Fundamentals</span></a>
             <a href="#"><i class="fas fa-calculator"></i><span> Mathematics</span></a>
             <a href="#"><i class="fas fa-pen"></i><span>Engineering</span></a>
             <a href="#"><i class="fas fa-desktop"></i><span>Technology and Computer Science</span></a>

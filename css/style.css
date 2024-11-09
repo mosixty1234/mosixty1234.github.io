@@ -165,7 +165,7 @@ form p a{
     background-color: #1f6087;
 }
 
-/* Logo Animation */
+
 /* Colors for each letter */
 .letter-color-1 { color: #FF5733; } /* Red */
 .letter-color-2 { color: #FFC300; } /* Yellow */
@@ -217,7 +217,7 @@ form p a{
   opacity: 0; /* Start transparent */
   margin-top: 8px; /* Add space above the heading */
   animation: fadeInSlideUp 2s ease forwards; /* Apply animation */
-  animation-delay: 0.5s; /* Delay to create a staggered effect */
+  animation-delay: 1.5s; /* Delay to create a staggered effect */
 }
 
 /* Keyframes for logo and heading animations */
@@ -244,11 +244,242 @@ form p a{
 }
 
 
+/* Search Form Styling */
+.search-form {
+   display: flex;
+   align-items: center;
+   max-width: 400px;
+   margin: 10px;
+   border: 1px solid #ccc;
+   border-radius: 25px;
+   overflow: hidden;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-form input[type="text"] {
+   flex: 1;
+   padding: 10px 15px;
+   font-size: 16px;
+   border: none;
+   outline: none;
+   color: #333;
+}
+
+.search-form .search-button {
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   cursor: pointer;
+   padding: 10px 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: background-color 0.3s ease;
+}
+
+.search-form .search-button:hover {
+   background-color: #45A049;
+}
+
+/* Icon Button Styling */
+.icons {
+   display: flex;
+   gap: 15px;
+   align-items: center;
+   margin: 10px 0;
+}
+
+.icon-button {
+   font-size: 20px;
+   cursor: pointer;
+   color: #333;
+   background: none;
+   border: none;
+   padding: 8px;
+   transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-button:hover {
+   color: #4CAF50;
+   transform: scale(1.1);
+}
+
+/* Accessibility Utility Class */
+.sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+}
+
+/* Basic Styling */
+.nav-link {
+   color: #FFFFFF;
+   text-decoration: none;
+   font-size: 18px;
+   margin: 0 20px;
+   display: flex;
+   align-items: center;
+   padding: 12px 18px;
+   position: relative;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar Link Styling */
+.navbar a {
+   text-decoration: none;
+   color: #ffffff;
+   font-weight: bold;
+   padding: 15px;
+   margin: 5px 0;
+   display: flex;
+   align-items: center;
+   border-radius: 16px;
+   background: linear-gradient(135deg, rgba(34, 193, 195, 0.6), rgba(253, 187, 45, 0.6));
+   transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+   backdrop-filter: blur(8px);
+}
+
+/* Navbar Link Icon Styling */
+.navbar a i {
+   margin-right: 12px;
+   font-size: 22px;
+   transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+/* Navbar Link Hover Effects */
+.navbar a:hover {
+   background: linear-gradient(135deg, rgba(53, 209, 211, 0.8), rgba(245, 121, 85, 0.8));
+   color: #FFFFFF;
+   transform: scale(1.12) translateY(-5px);
+   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+   text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* Nav-link Icon Hover Effects */
+.nav-link i {
+   font-size: 20px;
+   transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+.nav-link:hover {
+   color: #FFFFFF;
+   transform: scale(1.1) translateY(-4px);
+}
+
+.nav-link:hover i {
+   transform: rotate(15deg) scale(1.2);
+   color: #FFB74D;
+   font-size: 24px;
+   text-shadow: 0 0 8px rgba(255, 183, 77, 0.8);
+}
+
+/* Active Link Underline Animation */
+.nav-link::after {
+   content: '';
+   position: absolute;
+   bottom: -5px;
+   left: 50%;
+   width: 0;
+   height: 3px;
+   background-color: #FFB74D;
+   transition: width 0.5s ease, left 0.5s ease;
+}
+
+.nav-link:hover::after {
+   width: 100%;
+   left: 0;
+}
+
+/* Ripple Effect on Hover */
+.nav-link::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 0;
+   height: 0;
+   background: rgba(255, 183, 77, 0.3);
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+   opacity: 0;
+   transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+}
+
+.nav-link:hover::before {
+   width: 200%;
+   height: 200%;
+   opacity: 0.25;
+}
+
+/* Smooth Shadow Animation */
+.nav-link:hover {
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+   transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+/* Subtle Hover Effect for Navbar Links */
+.navbar a:hover {
+   transform: translateY(-8px);
+   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+   background: linear-gradient(135deg, rgba(34, 193, 195, 0.8), rgba(253, 87, 45, 0.8));
+}
+
+/* Add text underline with animation */
+.nav-link {
+   position: relative;
+   overflow: hidden;
+   display: inline-block;
+}
+
+.nav-link::before {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   width: 100%;
+   height: 3px;
+   background-color: #FFB74D;
+   transform: translateX(-50%) scaleX(0);
+   transform-origin: bottom right;
+   transition: transform 0.5s ease;
+}
+
+.nav-link:hover::before {
+   transform: translateX(-50%) scaleX(1);
+   transform-origin: bottom left;
+}
+
+/* Text Shadow and Letter Spacing */
+.nav-link:hover {
+   letter-spacing: 1.2px;
+   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 183, 77, 0.5);
+}
 
 
 
 
 
+
+
+
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+   .navbar {
+      flex-direction: column;
+   }
+   .nav-link {
+      margin: 10px 0;
+   }
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
@@ -460,34 +691,130 @@ section{
    width: 30rem;
 }
 
-.header .flex .profile.active{
-   transform: scale(1);
-}
-
-.header .flex .profile .image{
-   height: 10rem;
-   width: 10rem;
-   border-radius: 50%;
-   object-fit: contain;
-   margin-bottom: 1rem;
-}
-
-.header .flex .profile .name{
-   font-size: 2rem;
-   color:var(--black);
+/* Profile Container Styling */
+.profile {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 300px;
+   background: linear-gradient(135deg, #f0f2f5, #e6e8eb);
+   padding: 20px;
+   border-radius: 25px;
+   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1), -8px -8px 20px rgba(255, 255, 255, 0.7);
+   text-align: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
    overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
+   position: relative;
 }
 
-.header .flex .profile .role{
-   font-size: 1.8rem;
-   color: var(--light-color);
+.profile::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 200%;
+   height: 200%;
+   background: radial-gradient(circle, rgba(81, 82, 54, 0.158), transparent 70%);
+   transform: translate(-50%, -50%);
+   transition: opacity 0.4s ease;
+   opacity: 0;
 }
 
-#search-btn{
-   display: none;
+.profile:hover::before {
+   opacity: 1;
 }
+
+.profile:hover {
+   transform: translateY(-5px);
+   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15), -10px -10px 25px rgba(255, 255, 255, 0.8);
+   background: linear-gradient(135deg, #eaeff3, #dcdfe3);
+}
+
+/* Profile Image Styling */
+.profile-image {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   margin-bottom: 18px;
+   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile:hover .profile-image {
+   transform: scale(1.15);
+   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Name and Role Styling */
+.profile-name {
+   font-size: 22px;
+   font-weight: 700;
+   color: #333;
+   margin: 12px 0 6px;
+   letter-spacing: 0.7px;
+   text-transform: capitalize;
+}
+
+.profile-role {
+   font-size: 16px;
+   color: #666;
+   margin-bottom: 12px;
+   font-style: italic;
+}
+
+/* Profile Button Styling */
+.profile-btn {
+   font-size: 13px;
+   color: #fff;
+   background: linear-gradient(135deg, #36d1dc, #5b86e5);
+   padding: 12px 24px;
+   border-radius: 18px;
+   text-decoration: none;
+   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+   box-shadow: 0px 5px 15px rgba(91, 134, 229, 0.4);
+   overflow: hidden;
+   position: relative;
+}
+
+/* Profile Button Hover with Ripple Effect */
+.profile-btn:hover {
+   background: linear-gradient(135deg, #5b86e5, #36d1dc);
+   transform: translateY(-4px) scale(1.05);
+   box-shadow: 0px 8px 20px rgba(91, 134, 229, 0.5);
+}
+
+.profile-btn::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 120%;
+   height: 120%;
+   background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 80%);
+   border-radius: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   opacity: 0;
+   transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.profile-btn:hover::before {
+   transform: translate(-50%, -50%) scale(1);
+   opacity: 0.3;
+}
+
+/* Additional Text and Border Hover Effect */
+.profile-btn:hover {
+   background: linear-gradient(135deg, #5b86e5, #36d1dc);
+   transform: translateY(-4px) scale(1.05);
+   box-shadow: 0px 8px 20px rgba(91, 134, 229, 0.5);
+   color: #fff;
+   letter-spacing: 0.5px;
+}
+
+.profile-btn:hover span {
+   border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+}
+
 
 .side-bar{
    position: fixed;
@@ -548,29 +875,6 @@ section{
    color: var(--light-color);
 }
 
-.side-bar .navbar a{
-   display: block;
-   padding: 2rem;
-   font-size: 2rem;
-}
-
-.side-bar .navbar a i{
-   margin-right: 1.5rem;
-   color:var(--main-color);
-   transition: .2s linear;
-}
-
-.side-bar .navbar a span{
-   color:var(--light-color);
-}
-
-.side-bar .navbar a:hover{
-   background-color: var(--light-bg);
-}
-
-.side-bar .navbar a:hover i{
-   margin-right: 2.5rem;
-}
 
 .side-bar.active{
    left: -30rem;
@@ -1534,6 +1838,128 @@ section{
    width: 100%;
    margin: 1rem 0;
 }
+
+/* ---------- MAIN ---------- */
+
+/* Main Container */
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 25px;
+  color: #212529;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+/* Title */
+.main-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3142;
+  margin-bottom: 25px;
+}
+
+/* Cards Layout */
+.main-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Card Styles */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 15px;
+  color: #e1e1e1;
+  overflow: hidden;
+  background-size: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient Backgrounds */
+.card:first-child {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Violet to Blue */
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(135deg, #2bc645, #b7a418); /* Red to Orange */
+}
+
+.card:nth-child(3) {
+  background: linear-gradient(135deg, #ddda09, #e58638); /* Teal to Blue */
+}
+
+.card:nth-child(4) {
+  background: linear-gradient(135deg, #a06b17, #d67309); /* Pink to Peach */
+}
+
+.card:nth-child(5) {
+  background: linear-gradient(135deg, #c22a22, #b82909); /* Purple to Deep Blue */
+}
+
+/* Card Inner Elements */
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.card-inner > .material-icons-outlined {
+  font-size: 2.5rem;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .material-icons-outlined {
+  opacity: 1;
+}
+
+/* Charts Section */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.charts-card {
+  background: linear-gradient(135deg, #4e4e64, #5486d7);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.charts-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.chart-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #161718;
+}
+
+
+
 
 .footer{
    background-color: var(--white);
