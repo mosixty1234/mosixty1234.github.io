@@ -2257,7 +2257,7 @@ html {
 
 /* Footer Heading (h2) Styling */
 .footer h2 {
-   font-size: 3.8rem; /* Slightly smaller for clarity */
+   font-size: 3.8rem; /* Default font size */
    font-weight: 700; /* Bold, but not overwhelming */
    background: linear-gradient(to right, #A3C7F6, #6A8AFC); /* Subtle gradient for the heading */
    -webkit-background-clip: text; /* Gradient applied to text */
@@ -2268,7 +2268,58 @@ html {
    margin-bottom: 1.5rem;
    text-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
    line-height: 1.2;
+   transition: all 0.3s ease; /* Smooth transition for text shadow and color changes */
 }
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+   0% {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes glowEffect {
+   0% {
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+   }
+   100% {
+      text-shadow: 0 0 20px rgba(56, 96, 255, 0.8);
+   }
+}
+
+/* Responsive Adjustments */
+
+/* For smaller devices (phones) */
+@media screen and (max-width: 767px) {
+   .footer h2 {
+      font-size: 2.5rem; /* Smaller font size */
+      letter-spacing: 0.8px; /* Slightly reduced letter spacing */
+      margin-bottom: 1.2rem;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.1); /* Softer shadow for small screens */
+   }
+}
+
+/* For tablets and medium-sized screens */
+@media screen and (max-width: 1024px) {
+   .footer h2 {
+      font-size: 3.2rem; /* Adjust font size for tablets */
+      letter-spacing: 1px; /* Default spacing for tablets */
+   }
+}
+
+/* For large screens (desktops) */
+@media screen and (min-width: 1025px) {
+   .footer h2 {
+      font-size: 4rem; /* Slightly larger font size for large screens */
+      letter-spacing: 1.5px; /* Slightly increased letter spacing */
+   }
+}
+
 
 /* Glow Effect for Heading */
 @keyframes glowEffect {
@@ -2394,12 +2445,6 @@ html {
       transform: translateY(0);
    }
 }
-
-
-
-
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
