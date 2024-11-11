@@ -662,7 +662,7 @@ section{
 }
 
 .icon-button:hover {
-   color: #4CAF50;
+   color: #1919b8;
    transform: scale(1.1);
 }
 
@@ -1044,7 +1044,7 @@ form p a{
 /* Enhanced Hover Effect for Core Topics */
 .core-topics ul li {
    transition: transform 0.3s ease, box-shadow 0.3s ease;
-   border-radius: 8px;
+   border-radius: 10px;
    overflow: hidden;
    position: relative;
 }
@@ -1066,6 +1066,7 @@ form p a{
    display: block;
    border-radius: 6px;
    font-weight: bold;
+   font-size: 15px;
    position: relative;
    z-index: 1;
 }
