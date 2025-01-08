@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>watch-video 1</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <script src="https://kit.fontawesome.com/c92c70a5e9.js" crossorigin="anonymous"></script>
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo animated-logo">
+         <span class="letter-color-1">S</span>
+         <span class="letter-color-2">T</span>
+         <span class="letter-color-3">E</span>
+         <span class="letter-color-4">M</span>
+         &nbsp;&
+         <span class="letter-color-5">T</span>
+         <span class="letter-color-6">e</span>
+         <span class="letter-color-7">c</span>
+         <span class="letter-color-8">h</span>
+         &nbsp;ACADEMY
+       </a>
+       
+      <h2 class="animated-heading">Where Youth Discover STEM & Tech:Empowering those who take charge with their future</h2>
+
+      <form action="search.html" method="post" class="search-form">
+         <input 
+            type="text" 
+            name="search_box" 
+            id="search-box" 
+            required 
+            placeholder="Search courses..." 
+            maxlength="100" 
+            aria-label="Search for courses">
+         <button type="submit" class="search-button">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="sr-only">Search</span>
+         </button>
+      </form>
+      
+      <div class="icons">
+         <button id="menu-btn" class="icon-button fas fa-bars" aria-label="Menu"></button>
+         <button id="user-btn" class="icon-button fas fa-user" aria-label="User Profile"></button>
+         <button id="toggle-btn" class="icon-button fas fa-sun" aria-label="Toggle Theme"></button>
+      </div>
+
+      
+
+     <div class="profile">
+        <img src="images/pic-1.png" class="image" alt="">
+        <h3 class="name">Sipho Cedric Dlamini</h3>
+        <p class="role">Student</p>
+        <a href="profile.html" class="btn">view profile</a>
+
+      <div class="flex-btn">
+           <a href="login.html" class="option-btn">login</a>
+           <a href="register.html" class="option-btn">register</a>
+        </div>
+     </div>
+
+  </section>
+
+</header>
+
+  <div class="side-bar">
+
+    <div id="close-btn">
+       <i class="fas fa-times"></i>
+    </div>
+ 
+    <div class="profile">
+   <img src="images/pic-1.png" class="profile-image" alt="Profile picture of Sipho Cedric Dlamini">
+   <h3 class="profile-name">Sipho Cedric Dlamini</h3>
+   <p class="profile-role">Student</p>
+   <a href="profile.html" class="profile-btn">View Profile</a>
+</div>
+
+ 
+<nav class="navbar">
+   <a href="home.html" class="nav-link"><i class="fas fa-house-user"></i><span>HOME</span></a>
+   <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i><span>ABOUT</span></a>
+   <a href="courses.html" class="nav-link"><i class="fas fa-book-open"></i><span>COURSES</span></a>
+   <a href="contact.html" class="nav-link"><i class="fas fa-envelope-open-text"></i><span>CONTACT-US</span></a>
+   <a href="matric.html" class="nav-link"><i class="fas fa-chart-bar"></i><span>Matric Analysis</span></a>
+</nav>
+ </div>
+
+
+<section class="watch-video">
+
+   <div class="video-container">
+      <div class="video">
+         <iframe width="720" height="400" src="https://www.youtube.com/embed/gaminoBsQx0" title="ADebugging Techniques for Beginners" allowfullscreen></iframe>
+
+         
+      </div>
+      <h3 class="title">Debugging Techniques for Beginners</h3>
+      <div class="info">
+         <p class="date"><i class="fas fa-calendar"></i><span>02-01-2025</span></p>
+
+         <p class="date"><i class="fas fa-heart"></i><span>628 likes</span></p>
+      </div>
+
+      <div class="tutor">
+         <img src="images/thumb-2a.jpg" alt="">
+         <div>
+            <h3>Coding Tutor</h3>
+            <span>Tutor</span>
+         </div>
+      </div>
+
+      <form action="" method="post" class="flex">
+         <a href="playlist-4.html" class="inline-btn">view playlist</a>
+         <button><i class="far fa-heart"></i><span>like</span></button>
+      </form>
+
+      <p class="description">
+        Debugging Techniques for Beginners
+      </p>
+   </div>
+
+</section>
+
+<section class="comments">
+
+   <h1 class="heading">5 comments</h1>
+
+   <form action="" class="add-comment">
+      <h3>Add comments</h3>
+      <textarea name="comment_box" placeholder="enter your comment" required maxlength="1000" cols="30" rows="10"></textarea>
+      <input type="submit" value="add comment" class="inline-btn" name="add_comment">
+   </form>
+
+   <h1 class="heading">User comments</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-1.png" alt="">
+            <div>
+               <h3>Sipho</h3>
+               <span>02-01-2025</span>
+            </div>
+         </div>
+         <div class="comment-box">This is a comment section...
+         </div>
+
+         <form action="" class="flex-btn">
+            <input type="submit" value="edit comment" name="edit_comment" class="inline-option-btn">
+            <input type="submit" value="delete comment" name="delete_comment" class="inline-delete-btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-1.png" alt="">
+            <div>
+               <h3>Sipho Dlamini</h3>
+               <span>02-01-2025</span>
+            </div>
+         </div>
+         <div class="comment-box">awesome tutoring!
+            keep going!</div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-1.png" alt="">
+            <div>
+               <h3>Elon Musk</h3>
+               <span>02-01-2025</span>
+            </div>
+         </div>
+         <div class="comment-box">amazing way of teaching!
+            thank you so much!
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-1.png" alt="">
+            <div>
+               <h3>Karabo K</h3>
+               <span>02-01-2025</span>
+            </div>
+         </div>
+         <div class="comment-box">loved it, thanks for the tutor!</div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-1.png" alt="">
+            <div>
+               <h3>Keo R</h3>
+               <span>02-01-2025</span>
+            </div>
+         </div>
+         <div class="comment-box">this is what I have been looking for! thank you so much!</div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-4.jpg" alt="">
+            <div>
+               <h3>Jonas M</h3>
+               <span>02-01-2025</span>
+            </div>
+         </div>
+         <div class="comment-box">thanks for the lessons!
+
+         </div>
+      </div>
+
+   </div>
+
+</section>
+
+
+</body>
+
+<footer class="footer">
+   <div class="footer-content">
+      <h2>STEM & Tech Academy</h2>
+      <p>&copy; 2024 STEM & Tech Academy | All Rights Reserved</p>
+      <div class="social-icons">
+         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+   </div>
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</html>
