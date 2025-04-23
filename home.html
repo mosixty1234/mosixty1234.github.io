@@ -58,8 +58,8 @@
       </div>
 
       <div class="profile">
-         <img src="images/pic-1.png" class="image" alt="">
-         <h3 class="name">Sipho Cedric Dlamini</h3>
+         <img src="images/pic-1.png" class="image" alt="profile picture of the user">
+         <h3 class="profile-name">User Name</h3>
          <p class="role">Student</p>
          <a href="profile.html" class="btn">view profile</a>
 
@@ -295,6 +295,58 @@
 </footer>
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+   const token = localStorage.getItem('token');
+
+   if (!token) {
+
+      return;
+   }
+
+   try {
+      const response = await fetch('http://localhost:3000/api/getUserDetails', {
+         method: 'GET',
+         headers: {
+            'Authorization': `Bearer ${token}`,
+         },
+      });
+
+      if (response.ok) {
+         const user = await response.json();
+         console.log('User details fetched from API:', user);
+
+         document.querySelectorAll('.profile img').forEach(img => {
+                const imageUrl = user.profilePictureUrl && user.profilePictureUrl.startsWith('http')
+                    ? user.profilePictureUrl
+                    : `http://localhost:3000/uploads/${user.profilePictureUrl}`;
+                console.log('Setting profile picture URL to:', imageUrl);
+                img.src = imageUrl || 'images/pic-1.png';
+                img.alt = `Profile picture of ${user.name || 'User'}`;
+            });
+         // Update all profile names (h3 tags inside profile divs)
+         document.querySelectorAll('.profile h3').forEach(name => {
+            name.textContent = user.name || 'User Name';
+         });
+
+         // Update all emails if needed (optional)
+         const emailInput = document.querySelector('input[name="email"]');
+         if (emailInput) emailInput.value = user.email || '';
+
+         const nameInput = document.querySelector('input[name="name"]');
+         if (nameInput) nameInput.value = user.name || '';
+
+      } else {
+         const error = await response.json();
+         console.error('Error fetching user details:', error.error || response.statusText);
+         alert(error.error || 'Failed to fetch user details. Please try again later.');
+      }
+   } catch (error) {
+      console.error('Error:', error);
+      alert('An unexpected error occurred. Please try again later.');
+   }
+});
+
+</script>
 
 </html>
